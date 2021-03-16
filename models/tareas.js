@@ -14,6 +14,21 @@ class Tareas {
         this._listado = {};
     }
 
+    get listadoARR(){
+        const listado = []
+
+        //esto lo que hace es me coje de los objetos todas las llaves y de aqui ya me devuelve un arreglo asiqeu ya puedo usar lo metodos que tieenn los arrreglos
+
+        Object.keys(this._listado).forEach( key =>{
+            const tarea = this._listado[key];
+            listado.push(tarea);
+
+            console.log(key);
+        } )
+
+
+        return listado ;
+    }
 
     crearTarea(desc = ''){
         const tarea = new Tarea(desc);
